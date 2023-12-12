@@ -66,7 +66,7 @@ class ManagementCommandsAdminIndex(TemplateView):
             {
                 "title": _("Management commands"),  # need to show in page title
                 "COMMANDS": self.filter_by_permissions(
-                    commands=self.loader.commands, request=kwargs.get("request")  # type: ignore  # noqa: E501
+                    commands=self.loader.commands, request=self.request  # type: ignore  # noqa: E501
                 ),
             }
         )
